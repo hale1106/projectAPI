@@ -16,7 +16,7 @@
 			*	h5项目：进入<font color="#f00">子</font>项目根目录，运行<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">npm install</font>安装
 			*	java项目，进入<font color="#f00">主</font>项目根目录，运行<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">npm install</font>安装
 	*	开发环境
-		*	安装：全局装装<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px"> npm install -g grunt-cli fis jello fis-postpackager-simple fis-parser-less</font>
+		*	安装：全局安装<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px"> npm install -g grunt-cli fis jello fis-postpackager-simple fis-parser-less</font>
 		*	概括：
 			*	h5项目：
 				*	核心脚本为fis，在fis的基础上进行封装，fis相关<a href="http://fis.baidu.com/docs/beginning/getting-started.html" target="_blank">查看官网</a>
@@ -60,7 +60,7 @@
 				*	h5项目在用grunt demo启服务成功后，自动会在浏览器中打开调试链接，如127.0.0.1:9000，该链接对应index.html首页，如有新加的页面，如test.html,可直接访问127.0.0.1:9000/test.html。
 				*	java项目grunt demo启服务成功后，自动会在浏览器中打开调试链接，如127.0.0.1:9000，该链接对应index.vm，路由的配置文件在server.conf里已配置好，如新加vm页面，可在server.conf中按示例配置
 			*	数据模拟
-				*	页面数据模拟：模拟的数据都在/test/page/下，默认有json文件做为对应的数据，如/page/index.vm在数据文件为/test/page/index.json，无需配置，即自动对应解析相关的变量和数据
-				*	ajax数据模拟：在/test/page/下新建接口同名的json文件，然后在server.conf文件里配置对应的路由。如接口为/aa/bb/submitInfo，则对应的文件为/page/bb/submitInfo，然后在server.conf中按示例配置<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">rewrite ^\/aa\/bb\/submitInfo$ /page/bb/submitInfo.json</font>
+				*	页面数据模拟：模拟的数据都在/fe-source/test/page/下，默认有json文件做为对应的数据，如/fe-source/page/index.vm在数据文件为/fe-source/test/page/index.json，无需配置，即自动对应解析相关的变量和数据
+				*	ajax数据模拟：在/fe-source/test/page/下新建接口同名的json文件，然后在server.conf文件里配置对应的路由。如接口为/fe-source/aa/bb/submitInfo，则对应的文件为/fe-source/page/bb/submitInfo，然后在server.conf中按示例配置<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">rewrite ^\/aa\/bb\/submitInfo$ /page/bb/submitInfo.json</font>
 	*	注意事项
 		*	如遇到权限不足，启服务失败，不要用sodu提权，可以<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">chmod 777 -R 对应的路径	</font>来提权
