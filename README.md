@@ -64,3 +64,4 @@
 				*	ajax数据模拟：在/fe-source/test/page/下新建接口同名的json文件，然后在server.conf文件里配置对应的路由。如接口为/fe-source/aa/bb/submitInfo，则对应的文件为/fe-source/page/bb/submitInfo，然后在server.conf中按示例配置<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">rewrite ^\/aa\/bb\/submitInfo$ /page/bb/submitInfo.json</font>
 	*	注意事项
 		*	如遇到权限不足，启服务失败，不要用sodu提权，可以<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">chmod 777 -R 对应的路径	</font>来提权
+		*	如需在js代码中引用图片，需要在图片的路径外加一个变量 __uri，便用转为对应的线上的路径
