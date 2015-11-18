@@ -61,7 +61,7 @@
 				*	java项目grunt demo启服务成功后，自动会在浏览器中打开调试链接，如127.0.0.1:9000，该链接对应index.vm，路由的配置文件在server.conf里已配置好，如新加vm页面，可在server.conf中按示例配置
 			*	数据模拟
 				*	页面数据模拟：模拟的数据都在/fe-source/test/page/下，默认有json文件做为对应的数据，如/fe-source/page/index.vm在数据文件为/fe-source/test/page/index.json，无需配置，即自动对应解析相关的变量和数据
-				*	ajax数据模拟：在/fe-source/test/page/下新建接口同名的json文件，然后在server.conf文件里配置对应的路由。如接口为/fe-source/aa/bb/submitInfo，则对应的文件为/fe-source/page/bb/submitInfo，然后在server.conf中按示例配置<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">rewrite ^\/aa\/bb\/submitInfo$ /page/bb/submitInfo.json</font>
+				*	ajax数据模拟：在/fe-source/test/page/下新建接口同名的json文件，然后在server.conf文件里配置对应的路由。如接口为/sup/sub/submitInfo，则对应的文件为/test/page/sub/submitInfo.json，然后在server.conf中按示例配置<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">rewrite ^\/sup\/sub\/submitInfo$ /test/page/sub/submitInfo.json</font>
 	*	注意事项
 		*	如遇到权限不足，启服务失败，不要用sodu提权，可以<font style="color:#999;background:#eee;border:1px solid #999;padding:2px;border-radius:5px;margin:0 3px">chmod 777 -R 对应的路径	</font>来提权
 		*	如需在js代码中引用图片，需要在图片的路径外加一个变量 __uri，便用转为对应的线上的路径
